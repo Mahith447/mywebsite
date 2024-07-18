@@ -3,59 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Portfolio</title>
+    <title>Mahith S | Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <header class="bg-dark text-white p-3">
+        <nav class="container navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#">Mahith S</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
-    <section id="home">
+    <section id="home" class="container text-center mt-5">
         <h1>Welcome to My Portfolio</h1>
-        <p>Hi, I'm [Your Name]. I'm a [Your Profession].</p>
+        <p>Hi, I'm Mahith S. I'm a Tech-Savvy BCA Graduate and Software Development Enthusiast.</p>
     </section>
 
-    <section id="about">
+    <section id="about" class="container mt-5">
         <h2>About Me</h2>
-        <p>Here's a brief introduction about me.</p>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="profile.jpeg" alt="Profile Picture" class="img-fluid rounded-circle">
+            </div>
+            <div class="col-md-8">
+                <p>Tech-Savvy BCA Graduate with a passion for software development and UI/UX design. Experienced in Python, Java, AI Bot Development, Git, GitHub, and App Development.</p>
+                <p><strong>Contact:</strong> H.NO:1/90, Chettiyar Street, Namakkal, Tamil Nadu-637002.<br>
+                <strong>Phone:</strong> 9345297062<br>
+                <strong>Email:</strong> mahith447@gmail.com</p>
+                <p><a href="https://www.linkedin.com/in/mahith1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a></p>
+            </div>
+        </div>
     </section>
 
-    <section id="resume">
+    <section id="resume" class="container mt-5">
         <h2>Resume</h2>
         <p>Download my resume <a href="resume.pdf" download>here</a>.</p>
+        <p><strong>Education:</strong></p>
+        <ul>
+            <li>BCA, Muthayammal College Of Arts And Science, 2021 - 2024, 64.54%</li>
+            <li>HSC, The Modern Academy Hr Sec School, 2020 - 2021, 66%</li>
+            <li>SSLC, Kurinji Matriculation Higher Secondary School, 2018 - 2019, 49.80%</li>
+        </ul>
+        <p><strong>Projects:</strong></p>
+        <ul>
+            <li><strong>MCAS SmartHelper:</strong> Developed a chatbot for college uses with AI and a user-friendly interface.</li>
+            <li><strong>Logistics Application:</strong> Designed UI/UX for a logistics betting app using Figma.</li>
+            <li><strong>Android Application:</strong> Designed and developed a feature-rich Android application with login, registration, and text-to-text functionality.</li>
+        </ul>
+        <p><strong>Skills:</strong> Python Programming, Java Programming, AI Bot Development, Git and GitHub, UI/UX Development, App Development</p>
+        <p><strong>Certifications:</strong></p>
+        <ul>
+            <li>Internship in Emglitz Technology, Salem, focusing on App Development using Android Studio. Certificates: Project Completion, Internship Completion, and Industrial Exposure (2023)</li>
+            <li>Python Programming Language in Computer Software College (CSC), 2022, grade "A"</li>
+            <li>Generative Artificial Intelligence Prompt Engineering in Development, 2023</li>
+        </ul>
+        <p><strong>Languages:</strong> English, Tamil, Telugu</p>
+        <p><strong>Hobbies:</strong> Cycling, Boxing, Editing, Learning new things</p>
     </section>
 
-    <section id="portfolio">
+    <section id="portfolio" class="container mt-5">
         <h2>Portfolio</h2>
         <p>Here are some of my projects:</p>
         <!-- Add your projects here -->
     </section>
 
-    <section id="contact">
+    <section id="contact" class="container mt-5">
         <h2>Contact</h2>
         <p>Get in touch with me:</p>
         <form action="mailto:your.email@example.com" method="post" enctype="text/plain">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name"><br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email"><br><br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
-            <input type="submit" value="Send">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" class="form-control"></textarea>
+            </div>
+            <input type="submit" value="Send" class="btn btn-primary">
         </form>
     </section>
 
-    <footer>
-        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+    <footer class="bg-dark text-white text-center p-3 mt-5">
+        <p>&copy; 2024 Mahith S. All rights reserved.</p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
