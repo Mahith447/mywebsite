@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahith S | Home</title>
+    <title>Mahith S | Contact</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -26,17 +26,32 @@
         </nav>
     </header>
 
-    <section id="home" class="container text-center mt-5">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Hi, I'm Mahith S. I'm a Tech-Savvy BCA Graduate and Software Development Enthusiast.</p>
+    <section id="contact" class="container mt-5">
+        <h2>Contact</h2>
+        <p>Get in touch with me:</p>
+        <form action="mailto:mahith447@gmail.com" method="post" enctype="text/plain">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" class="form-control"></textarea>
+            </div>
+            <input type="submit" value="Send" class="btn btn-primary">
+        </form>
     </section>
 
     <footer class="bg-dark text-white text-center p-3 mt-5">
         <p>&copy; 2024 Mahith S. All rights reserved.</p>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
