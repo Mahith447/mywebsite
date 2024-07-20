@@ -30,22 +30,23 @@ header {
 
 header .navbar-brand {
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 header .navbar-nav .nav-link {
     font-size: 1rem;
     margin-right: 20px;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s;
 }
 
 header .navbar-nav .nav-link:hover {
-    color: #17a2b8; /* Bootstrap's info color */
+    color: #17a2b8;
+    transform: translateY(-2px);
 }
 
 /* Section styles */
 section {
-    padding: 60px 0;
+    padding: 60px 20px;
 }
 
 section h2 {
@@ -61,30 +62,39 @@ section p {
 
 /* Home section */
 #home {
-    background-color: #007bff;
+    background: linear-gradient(to right, #007bff, #0056b3);
     color: white;
     padding: 100px 0;
+    text-align: center;
 }
 
 #home h1 {
     font-size: 3rem;
     margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 #home p {
     font-size: 1.5rem;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 /* About section */
+#about {
+    background-color: #ffffff;
+    color: #333;
+}
+
 #about .col-md-4 img {
     border: 5px solid #007bff;
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
-    transition: box-shadow 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 #about .col-md-4 img:hover {
     box-shadow: 0 0 25px rgba(0, 123, 255, 0.8);
+    transform: scale(1.05);
 }
 
 #about p {
@@ -96,15 +106,30 @@ section p {
 }
 
 /* Resume section */
+#resume {
+    background-color: #f8f9fa;
+}
+
 #resume ul {
     list-style: none;
 }
 
 #resume ul li {
     margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+#resume ul li:hover {
+    background-color: #e9ecef;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 /* Portfolio section */
+#portfolio {
+    background-color: #ffffff;
+}
+
 #portfolio ul {
     list-style: none;
     padding: 0;
@@ -117,6 +142,9 @@ section p {
 #portfolio .btn-primary {
     position: relative;
     overflow: hidden;
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 #portfolio .btn-primary::after {
@@ -147,9 +175,26 @@ section p {
 #portfolio h3 {
     margin-top: 40px;
     font-size: 2rem;
+    color: #007bff;
+    position: relative;
+}
+
+#portfolio h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 50px;
+    height: 3px;
+    background-color: #007bff;
+    border-radius: 2px;
 }
 
 /* Contact section */
+#contact {
+    background-color: #f8f9fa;
+}
+
 #contact .form-group {
     animation: slideIn 1s ease-out;
 }
@@ -157,11 +202,12 @@ section p {
 #contact input, #contact textarea {
     border-radius: 5px;
     border: 1px solid #ced4da;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 #contact input:focus, #contact textarea:focus {
     border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 #contact input[type="submit"] {
@@ -170,11 +216,12 @@ section p {
     padding: 10px 20px;
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 #contact input[type="submit"]:hover {
     background-color: #0056b3;
+    transform: translateY(-2px);
 }
 
 /* Footer styles */
@@ -182,6 +229,7 @@ footer {
     background-color: #343a40;
     color: white;
     padding: 20px 0;
+    text-align: center;
 }
 
 footer p {
@@ -197,14 +245,6 @@ footer p {
 @keyframes slideIn {
     from { transform: translateY(20px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
-}
-
-section {
-    animation: fadeIn 1s ease-in;
-}
-
-h1, h2, h3 {
-    animation: slideIn 1s ease-out;
 }
 
 /* Responsive styles */
