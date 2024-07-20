@@ -11,10 +11,10 @@ body, h1, h2, h3, p, ul, li, a, form, input, textarea, button {
 
 /* General body styles */
 body {
-    font-family: 'Georgia', serif;
-    line-height: 1.7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
     color: #333;
-    background-color: #f4f4f4;
+    background-color: #f8f9fa;
     padding-top: 80px; /* Space for sticky header */
 }
 
@@ -24,26 +24,23 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
-    background-color: #2c3e50; /* Dark background for header */
-    color: #ecf0f1; /* Light text color */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    background-color: #343a40;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 header .navbar-brand {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #ecf0f1;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 header .navbar-nav .nav-link {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-right: 20px;
-    transition: color 0.3s, transform 0.3s;
+    transition: color 0.3s;
 }
 
 header .navbar-nav .nav-link:hover {
-    color: #3498db; /* Light blue color on hover */
-    transform: translateY(-2px);
+    color: #17a2b8; /* Bootstrap's info color */
 }
 
 /* Section styles */
@@ -53,47 +50,66 @@ section {
 
 section h2 {
     font-size: 2.8rem;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     color: #2c3e50;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 10px;
-    display: inline-block;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 50px;
+    height: 4px;
+    background-color: #3498db;
+    border-radius: 2px;
 }
 
 section p {
     font-size: 1.2rem;
+    line-height: 1.6;
     margin-bottom: 20px;
+}
+
+section a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+section a:hover {
+    color: #2980b9;
 }
 
 /* Home section */
 #home {
-    background: linear-gradient(to right, #2980b9, #2c3e50);
+    background-color: #007bff;
     color: white;
-    padding: 100px 0;
+    padding: 100px 20px;
     text-align: center;
 }
 
 #home h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin-bottom: 20px;
-    animation: fadeIn 1s ease-in-out;
 }
 
 #home p {
-    font-size: 1.6rem;
-    animation: fadeIn 1.5s ease-in-out;
+    font-size: 1.5rem;
 }
 
 /* About section */
 #about {
-    background-color: #ffffff;
+    background-color: #f9f9f9;
     color: #333;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 #about .col-md-4 img {
     border: 6px solid #3498db;
     border-radius: 50%;
-    box-shadow: 0 0 20px rgba(52, 152, 219, 0.4);
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.3);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
@@ -104,47 +120,61 @@ section p {
 
 #about p {
     font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
 #about p strong {
     font-weight: bold;
+    color: #3498db;
 }
 
 /* Resume section */
 #resume {
-    background-color: #ecf0f1;
+    background-color: #ffffff;
+    color: #333;
 }
 
 #resume ul {
     list-style: none;
-    padding: 0;
 }
 
 #resume ul li {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #bdc3c7;
-    border-radius: 5px;
-    transition: background-color 0.3s, border-color 0.3s;
-}
-
-#resume ul li:hover {
-    background-color: #ffffff;
-    border-color: #3498db;
+    margin-bottom: 10px;
 }
 
 /* Portfolio section */
 #portfolio {
     background-color: #ffffff;
+    color: #333;
 }
 
 #portfolio ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 #portfolio ul li {
-    margin-bottom: 15px;
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: calc(33% - 20px);
+}
+
+#portfolio ul li img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#portfolio ul li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 #portfolio .btn-primary {
@@ -182,67 +212,44 @@ section p {
 
 #portfolio h3 {
     margin-top: 40px;
-    font-size: 2.2rem;
-    color: #3498db;
-    position: relative;
-}
-
-#portfolio h3::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    width: 60px;
-    height: 4px;
-    background-color: #3498db;
-    border-radius: 2px;
+    font-size: 2rem;
+    color: #2c3e50;
 }
 
 /* Contact section */
 #contact {
-    background-color: #ecf0f1;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 #contact .form-group {
-    animation: slideIn 1s ease-out;
+    margin-bottom: 20px;
 }
 
 #contact input, #contact textarea {
     border-radius: 5px;
-    border: 1px solid #bdc3c7;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-#contact input:focus, #contact textarea:focus {
-    border-color: #3498db;
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    border: 1px solid #ced4da;
 }
 
 #contact input[type="submit"] {
-    background-color: #3498db;
+    background-color: #007bff;
     border: none;
-    padding: 12px 24px;
+    padding: 10px 20px;
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s;
 }
 
 #contact input[type="submit"]:hover {
-    background-color: #2980b9;
-    transform: translateY(-2px);
+    background-color: #0056b3;
 }
 
 /* Footer styles */
 footer {
-    background-color: #2c3e50;
+    background-color: #343a40;
     color: white;
     padding: 20px 0;
     text-align: center;
-}
-
-footer p {
-    margin: 0;
-    font-size: 1rem;
 }
 
 /* Animations */
@@ -251,18 +258,20 @@ footer p {
     to { opacity: 1; }
 }
 
-@keyframes slideIn {
+@keyframes slideUp {
     from { transform: translateY(20px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
-    header .navbar-nav {
-        text-align: center;
+    #portfolio ul li {
+        width: calc(50% - 20px);
     }
+}
 
-    #about .col-md-4 {
-        margin-bottom: 20px;
+@media (max-width: 576px) {
+    #portfolio ul li {
+        width: 100%;
     }
 }
