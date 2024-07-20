@@ -99,36 +99,6 @@ section a:hover {
     font-size: 1.5rem;
 }
 
-/* About section */
-#about {
-    background-color: #f9f9f9;
-    color: #333;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-#about .col-md-4 img {
-    border: 6px solid #3498db;
-    border-radius: 50%;
-    box-shadow: 0 0 20px rgba(52, 152, 219, 0.3);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-#about .col-md-4 img:hover {
-    box-shadow: 0 0 30px rgba(52, 152, 219, 0.6);
-    transform: scale(1.05);
-}
-
-#about p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-#about p strong {
-    font-weight: bold;
-    color: #3498db;
-}
-
 /* Resume section */
 #resume {
     background-color: #ffffff;
@@ -141,79 +111,6 @@ section a:hover {
 
 #resume ul li {
     margin-bottom: 10px;
-}
-
-/* Portfolio section */
-#portfolio {
-    background-color: #ffffff;
-    color: #333;
-}
-
-#portfolio ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-#portfolio ul li {
-    background: #f9f9f9;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: calc(33% - 20px);
-}
-
-#portfolio ul li img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-#portfolio ul li:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-#portfolio .btn-primary {
-    position: relative;
-    overflow: hidden;
-    background-color: #3498db;
-    border-color: #3498db;
-    transition: background-color 0.3s, border-color 0.3s;
-}
-
-#portfolio .btn-primary::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300%;
-    height: 300%;
-    background: rgba(52, 152, 219, 0.2);
-    transition: width 0.4s, height 0.4s;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 0;
-}
-
-#portfolio .btn-primary:hover::after {
-    width: 0;
-    height: 0;
-}
-
-#portfolio .btn-primary:hover {
-    color: #fff;
-    background-color: #2980b9;
-    border-color: #2980b9;
-}
-
-#portfolio h3 {
-    margin-top: 40px;
-    font-size: 2rem;
-    color: #2c3e50;
 }
 
 /* Contact section */
@@ -274,4 +171,78 @@ footer {
     #portfolio ul li {
         width: 100%;
     }
+}
+
+/* Additional styling for a classic and professional look */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Add padding and margins */
+section {
+    padding: 80px 20px;
+}
+
+section h2 {
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+section p {
+    margin-bottom: 20px;
+}
+
+/* Card-like styling for portfolio items */
+#portfolio ul li {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: calc(33% - 20px);
+}
+
+#portfolio ul li img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#portfolio ul li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#portfolio .btn-primary {
+    position: relative;
+    overflow: hidden;
+    background-color: #3498db;
+    border-color: #3498db;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#portfolio .btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(52, 152, 219, 0.2);
+    transition: width 0.4s, height 0.4s;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+#portfolio .btn-primary:hover::after {
+    width: 0;
+    height: 0;
+}
+
+#portfolio .btn-primary:hover {
+    color: #fff;
+    background-color: #2980b9;
+    border-color: #2980b9;
 }
