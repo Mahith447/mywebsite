@@ -14,7 +14,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f8f9fa;
+    background-color: #f4f6f9;
     padding-top: 80px; /* Space for sticky header */
 }
 
@@ -25,17 +25,20 @@ header {
     width: 100%;
     z-index: 1000;
     background-color: #343a40;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 10px 0;
 }
 
 header .navbar-brand {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: bold;
+    color: #ffffff;
 }
 
 header .navbar-nav .nav-link {
     font-size: 1rem;
     margin-right: 20px;
+    color: #ffffff;
     transition: color 0.3s;
 }
 
@@ -45,14 +48,17 @@ header .navbar-nav .nav-link:hover {
 
 /* Section styles */
 section {
-    padding: 60px 20px;
+    padding: 80px 20px;
+    background: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 section h2 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     margin-bottom: 30px;
     color: #2c3e50;
     position: relative;
+    font-weight: bold;
 }
 
 section h2::after {
@@ -60,7 +66,7 @@ section h2::after {
     position: absolute;
     left: 0;
     bottom: -10px;
-    width: 50px;
+    width: 60px;
     height: 4px;
     background-color: #3498db;
     border-radius: 2px;
@@ -68,17 +74,18 @@ section h2::after {
 
 section p {
     font-size: 1.2rem;
-    line-height: 1.6;
+    line-height: 1.8;
     margin-bottom: 20px;
 }
 
-section a {
+/* Link styles */
+a {
     color: #3498db;
     text-decoration: none;
     transition: color 0.3s;
 }
 
-section a:hover {
+a:hover {
     color: #2980b9;
 }
 
@@ -86,36 +93,138 @@ section a:hover {
 #home {
     background-color: #007bff;
     color: white;
-    padding: 100px 20px;
     text-align: center;
+    padding: 120px 20px;
+    position: relative;
 }
 
 #home h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 20px;
 }
 
 #home p {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 30px;
 }
 
-/* Resume section */
-#resume {
+/* About section */
+#about {
     background-color: #ffffff;
     color: #333;
 }
 
+#about .img-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#about .img-container img {
+    border: 5px solid #007bff;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+#about .img-container img:hover {
+    transform: scale(1.05);
+}
+
+#about p {
+    font-size: 1.2rem;
+}
+
+/* Resume section */
+#resume {
+    background-color: #f9f9f9;
+}
+
 #resume ul {
     list-style: none;
+    padding: 0;
 }
 
 #resume ul li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+#resume ul li strong {
+    color: #007bff;
+}
+
+/* Portfolio section */
+#portfolio {
+    background-color: #ffffff;
+    color: #333;
+}
+
+#portfolio ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#portfolio ul li {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: calc(33.333% - 20px);
+    position: relative;
+}
+
+#portfolio ul li img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#portfolio ul li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#portfolio .btn-primary {
+    position: relative;
+    overflow: hidden;
+    background-color: #3498db;
+    border-color: #3498db;
+    color: #ffffff;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#portfolio .btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(52, 152, 219, 0.2);
+    transition: width 0.4s, height 0.4s;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+#portfolio .btn-primary:hover::after {
+    width: 0;
+    height: 0;
+}
+
+#portfolio .btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
 }
 
 /* Contact section */
 #contact {
-    background-color: #f9f9f9;
+    background-color: #f4f6f9;
     color: #333;
 }
 
@@ -171,78 +280,4 @@ footer {
     #portfolio ul li {
         width: 100%;
     }
-}
-
-/* Additional styling for a classic and professional look */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Add padding and margins */
-section {
-    padding: 80px 20px;
-}
-
-section h2 {
-    margin-bottom: 40px;
-    font-weight: bold;
-}
-
-section p {
-    margin-bottom: 20px;
-}
-
-/* Card-like styling for portfolio items */
-#portfolio ul li {
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: calc(33% - 20px);
-}
-
-#portfolio ul li img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-#portfolio ul li:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-#portfolio .btn-primary {
-    position: relative;
-    overflow: hidden;
-    background-color: #3498db;
-    border-color: #3498db;
-    transition: background-color 0.3s, border-color 0.3s;
-}
-
-#portfolio .btn-primary::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300%;
-    height: 300%;
-    background: rgba(52, 152, 219, 0.2);
-    transition: width 0.4s, height 0.4s;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 0;
-}
-
-#portfolio .btn-primary:hover::after {
-    width: 0;
-    height: 0;
-}
-
-#portfolio .btn-primary:hover {
-    color: #fff;
-    background-color: #2980b9;
-    border-color: #2980b9;
 }
