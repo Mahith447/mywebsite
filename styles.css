@@ -301,12 +301,3 @@ footer p {
         font-size: 1.8rem;
     }
 }
-/* Additional CSS for lightbox gallery */
-#gallery img {
-    border-radius: 8px;
-    transition: transform 0.3s;
-}
-
-#gallery img:hover {
-    transform: scale(1.05);
-}
