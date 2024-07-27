@@ -35,6 +35,9 @@
 
     <footer class="bg-dark text-white text-center p-3 mt-5">
         <p>&copy; 2024 Mahith S. All rights reserved.</p>
+        <!-- Dark Mode Toggle -->
+<button id="darkModeToggle">Toggle Dark Mode</button>
+
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -54,5 +57,13 @@
     })();
     </script>
     <!--End of Tawk.to Script-->
+    <!-- Before closing </body> tag -->
+<script>
+    document.getElementById('darkModeToggle').addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        document.querySelector('header').classList.toggle('dark-mode');
+    });
+    </script>
+    
 </body>
 </html>

@@ -310,3 +310,19 @@ footer p {
 #gallery img:hover {
     transform: scale(1.05);
 }
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+header.dark-mode {
+    background-color: #222;
+}
+
+/* Toggle Button Styles */
+#darkModeToggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
